@@ -63,9 +63,14 @@ function sortHandle(typeSort) {
  * @return {Object }
  */
 export function getOne({id, fields} = {}) {
-    const arrayFields = fields.split(',');
     const productFound = products.find(product => product.id === id);
-    return pick(productFound, arrayFields);
+    if(fields){
+        const arrayFields = fields.split(',');
+        return pick(productFound, arrayFields);
+    }
+    return productFound;
+
+
 
 }
 
