@@ -11,6 +11,7 @@
     "watch": "babel src --out-dir lib --copy-files --source-maps --include-dotfiles --watch --verbose"
   },
   "dependencies": {
+    "@koa/cors": "^4.0.0",
     "@koa/ejs": "^5.0.0",
     "ajax": "^0.0.4",
     "faker": "^5.4.0",

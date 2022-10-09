@@ -18,7 +18,6 @@ export async function getProducts(ctx) {
         ctx.body = {
             data: products
         };
-        await ctx.render('productList', {products : products});
     } catch (e) {
         ctx.status = 404;
         ctx.body = {

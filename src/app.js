@@ -4,10 +4,11 @@ import router from "./routes/routes";
 const app = new Koa();
 const render = require('@koa/ejs');
 const path = require('path');
+const cors = require('@koa/cors');
 
 
 
-
+app.use(cors());
 app.use(koaBody());
 app.use(router.routes())
 render(app, {
