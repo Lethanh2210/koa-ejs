@@ -6,5 +6,3 @@ export function pick(object, keys) {
         return obj;
     }, {});
 }
-
-//fulfillmentService

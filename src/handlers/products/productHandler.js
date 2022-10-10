@@ -4,7 +4,7 @@ import {
     getOne as getOneProduct,
     remove as removeProduct,
     update
-} from "../../database/productRepository.js";
+} from "../../repository/productRepository.js";
 
 /**
  *
@@ -89,7 +89,6 @@ export async function deleteProduct(ctx) {
     try {
         const {id} = ctx.params;
         removeProduct(id);
-
         ctx.status = 200;
         return ctx.body = {
             success: "Delete Product successfully"
@@ -113,7 +112,7 @@ export async function updateProduct(ctx) {
         const {id} = ctx.params;
         const updateData = ctx.request.body;
         update({id, updateData});
-        ctx.status = 200;
+
         return ctx.body = {
             success: "Update Product successfully"
         };

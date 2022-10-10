@@ -1,4 +1,4 @@
-import {data as products} from "./products.json";
+import {data as products} from "../database/products.json";
 import fs from "fs";
 import {pick} from "../service/productService";
 
